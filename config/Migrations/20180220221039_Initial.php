@@ -19,7 +19,7 @@ class Initial extends AbstractMigration
                 'limit' => 11,
                 'null' => true,
             ])
-            ->addColumn('deleted', 'tinyinteger', [
+            ->addColumn('deleted', 'integer', [
                 'comment' => '削除フラグ',
                 'default' => null,
                 'limit' => 4,
@@ -64,7 +64,7 @@ class Initial extends AbstractMigration
                 'limit' => null,
                 'null' => true,
             ])
-            ->addColumn('deleted', 'tinyinteger', [
+            ->addColumn('deleted', 'integer', [
                 'comment' => '削除フラグ',
                 'default' => null,
                 'limit' => 4,
@@ -115,7 +115,7 @@ class Initial extends AbstractMigration
                 'limit' => null,
                 'null' => true,
             ])
-            ->addColumn('deleted', 'tinyinteger', [
+            ->addColumn('deleted', 'integer', [
                 'comment' => '削除フラグ',
                 'default' => null,
                 'limit' => 4,
@@ -154,13 +154,13 @@ class Initial extends AbstractMigration
                 'limit' => null,
                 'null' => true,
             ])
-            ->addColumn('photo', 'binary', [
+            ->addColumn('photo', 'text', [
                 'comment' => '写真',
                 'default' => null,
-                'limit' => 16777215,
+                'limit' => null,
                 'null' => true,
             ])
-            ->addColumn('deleted', 'tinyinteger', [
+            ->addColumn('deleted', 'integer', [
                 'comment' => '削除フラグ',
                 'default' => null,
                 'limit' => 4,
