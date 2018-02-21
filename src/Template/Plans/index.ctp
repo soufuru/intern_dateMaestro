@@ -9,16 +9,15 @@
 <!---->
 
 <?php
-//
-//dump($plans);
-//dump($spots->first());
 
 $plan = $plans->first();
 
 ?>
 
 <h1> <?=  $plan->name; ?></h1>
-<?= $this->Form->button(__('Like'), ['action' => 'like']);?>
+
+<?//= $this->Form->button(__('Like'));?>
+
 
 <table>
     <tr>

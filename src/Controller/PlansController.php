@@ -14,6 +14,7 @@ class PlansController extends AppController {
     public $helpers = ['Html', 'Form'];
 
     public function index() {
+//        echo $this->Form->create($plan);
         $this->set('plans', $this->Plans->find('all'));
         $this->loadModel('Spots');
         $this->set('spots', $this->Spots->find('all'));
