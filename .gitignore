@@ -6,6 +6,10 @@
 /tmp/*
 /vendor/*
 
+# My OWN files #
+/uicookies.com/*
+
+
 # OS generated files #
 ######################
 .DS_Store
