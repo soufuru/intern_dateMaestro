@@ -1,7 +1,6 @@
-<!-- File: /app/View/Posts/index.ctp -->
 <h1> <?=  h($plan->name); ?></h1>
 
-<?= $this->Form->submit("LIKE"); ?>
+<?= $this->Form->submit("LIKE",['onclick']); ?>
 
 <table>
     <tr>

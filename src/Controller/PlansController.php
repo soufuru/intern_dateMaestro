@@ -10,6 +10,15 @@ namespace App\Controller;
 
 class PlansController extends AppController {
 
+
+    /**
+     *
+     */
+    public function index() {
+
+    }
+
+
     /**
      * view
      * plans/view/idで詳細画面を表示
@@ -21,8 +30,6 @@ class PlansController extends AppController {
         $this->set('plan', $plan);
     }
 
-    public function index() {
 
-    }
 
 }
