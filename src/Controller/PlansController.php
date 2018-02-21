@@ -21,5 +21,8 @@ class PlansController extends AppController {
         $this->set('plan', $plan);
     }
 
+    public function index() {
+
+    }
 
 }
