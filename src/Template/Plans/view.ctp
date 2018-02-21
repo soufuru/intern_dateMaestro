@@ -1,13 +1,4 @@
-<!--/**-->
-<!-- * Created by PhpStorm.-->
-<!-- * User: soufuru-->
-<!-- * Date: 2018/02/20-->
-<!-- * Time: 17:42-->
-<!-- */ -->
-
 <!-- File: /app/View/Posts/index.ctp -->
-<!---->
-
 <h1> <?=  h($plans[0]->plan->name); ?></h1>
 
 <?= $this->Form->submit("LIKE"); ?>
