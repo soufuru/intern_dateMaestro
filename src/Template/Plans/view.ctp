@@ -8,19 +8,9 @@
 <!-- File: /app/View/Posts/index.ctp -->
 <!---->
 
-<?php
+<h1> <?=  $plans[0]->plan->name; ?></h1>
 
-$plan = $plans->first();
-
-?>
-
-<h1> <?=  $plan->name; ?></h1>
-
-<?//=$this->Form->submit('LIKE')?>
-<!--<input type="submit" name="insert" value="insert" onclick="insert()" />-->
-
-<?//= $this->Form->submit('Like');?>
-
+<?= $this->Form->submit("LIKE"); ?>
 
 <table>
     <tr>
@@ -28,15 +18,14 @@ $plan = $plans->first();
         <th>Place</th>
         <th>Picture</th>
     </tr>
-    <!-- ここから、$posts配列をループして、投稿記事の情報を表示 -->
-    <?php foreach ($spots as $spot): ?>
+    <?php foreach ($plans as $plan): ?>
     <tr>
-        <td><?= $spot->start_time; ?></td>
-        <td><?= $spot->place; ?></td>
-        <td><a href=<?=$spot->photo ?>> <img src=<?=$spot->photo ?> border="0"></a></td>
+        <td><?= $plan->start_time; ?></td>
+        <td><?= $plan->place; ?></td>
+        <td><a href=<?=$plan->photo ?>> <img src=<?=$plan->photo ?> border="0"></a></td>
     </tr>
     <?php endforeach; ?>
 </table>
 
 <h2>コメント</h2>
-<p><?= $plan->comment; ?></p>
+<p><?= $plans->plan->comment; ?></p>

@@ -13,11 +13,21 @@ use Cake\ORM\TableRegistry;
 class PlansController extends AppController {
     public $helpers = ['Html', 'Form'];
 
-    public function index() {
-//        echo $this->Form->create($plan);
-        $this->set('plans', $this->Plans->find('all'));
+    /**
+     * @author soufuru
+     * @param $id
+     */
+    public function view($id) {
         $this->loadModel('Spots');
-        $this->set('spots', $this->Spots->find('all'));
+        $spots = $this->Spots->find('all')->contain(['Plans']);
+        $plans = [];
+
+        foreach ($spots as $spot) {
+            if ($spot->plan_id == $id) {
+                $plans[] = $spot;
+            }
+        }
+        $this->set('plans', $plans);
     }
 
 

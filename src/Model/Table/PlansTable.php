@@ -13,11 +13,25 @@ use Cake\Validation\Validator;
 
 class PlansTable extends Table
 {
+
+    /**
+     * @author soufuru
+     * @param array $config
+     */
   public function initialize(array $config)
   {
     $this->addBehavior('Timestamp');
+    $this->hasMany('Spots', [
+        'foreignKey' => 'plan_id',
+      ]);
   }
 
+    /**
+     * @author soufuru
+     * @param Validator $validator
+     * @return Validator
+     *
+     */
   public function validationDefault(Validator $validator)
   {
       $validator

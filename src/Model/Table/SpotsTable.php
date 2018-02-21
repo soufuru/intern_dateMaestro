@@ -13,9 +13,15 @@ use Cake\Validation\Validator;
 
 class SpotsTable extends Table
 {
+    /**
+     * @param array $config
+     */
     public function initialize(array $config)
     {
         $this->addBehavior('Timestamp');
+        $this->belongsTo('Plans',[
+            'foreignKey' => 'plan_id',
+        ]);
     }
 
     public function validationDefault(Validator $validator)
