@@ -1,9 +1,7 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Ryo.Takahashi
- * Date: 2018/02/21
- * Time: 13:50
+ * @author Rtakaha
+ * @return array
  */
 // src/Model/Table/PlansTable.php
 
@@ -16,5 +14,8 @@ class PlansTable extends Table
     public function initialize(array $config)
     {
         $this->addBehavior('Timestamp');
+        $this->belongsTo('Users', [
+            'foreignKey' => 'user_id'
+        ]);
     }
 }

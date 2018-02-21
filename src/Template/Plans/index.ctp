@@ -3,9 +3,9 @@
       <h1>Plans</h1>
       <table>
           <tr>
-              <th width="50">Id</th>
+              <th width="50">ID</th>
               <th>Date plan</th>
-              <th width="300">User id</th>
+              <th width="300">User name</th>
               <th width="500">Created</th>
           </tr>
 
@@ -18,7 +18,7 @@
                           "alt" => $plan->name,
                           'url' => ['action' => 'view', $plan->id]]) ?>
               </td>
-              <td><?= $plan->user_id ?></td>
+              <td><?= $plan->user->name ?></td>
               <td>
                   <?= $plan->created->format(DATE_RFC850) ?>
               </td>
