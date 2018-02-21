@@ -13,7 +13,7 @@
     <tr>
         <td><?= h($spot->start_time); ?></td>
         <td><?= h($spot->place); ?></td>
-        <td><a href=<?=$spot->photo ?>> <img src=<?=$spot->photo ?> border="0"></a></td>
+        <td><a href="<?=$spot->photo ?>"> <img src=<?=$spot->photo ?> border="0"></a></td>
     </tr>
     <?php endforeach; ?>
 </table>

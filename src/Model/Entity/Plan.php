@@ -12,14 +12,5 @@ use Cake\ORM\Entity;
 
 class Plan extends Entity
 {
-    /**
-     * @author soufuru
-     *
-     */
-    public function first()
-    {
-        
-    }
-
 
 }
