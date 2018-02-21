@@ -1,5 +1,5 @@
 <!-- File: /app/View/Posts/index.ctp -->
-<h1> <?=  h($plans[0]->plan->name); ?></h1>
+<h1> <?=  h($plan->name); ?></h1>
 
 <?= $this->Form->submit("LIKE"); ?>
 
@@ -9,14 +9,14 @@
         <th>Place</th>
         <th>Picture</th>
     </tr>
-    <?php foreach ($plans as $plan): ?>
+    <?php foreach ($plan->spots as $spot): ?>
     <tr>
-        <td><?= h($plan->start_time); ?></td>
-        <td><?= h($plan->place); ?></td>
-        <td><a href=<?=$plan->photo ?>> <img src=<?=$plan->photo ?> border="0"></a></td>
+        <td><?= h($spot->start_time); ?></td>
+        <td><?= h($spot->place); ?></td>
+        <td><a href=<?=$spot->photo ?>> <img src=<?=$spot->photo ?> border="0"></a></td>
     </tr>
     <?php endforeach; ?>
 </table>
 
 <h2>コメント</h2>
-<p><?= h($plans->plan->comment); ?></p>
+<p><?= h($plan->comment); ?></p>

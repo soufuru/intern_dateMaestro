@@ -7,8 +7,6 @@
  */
 
 namespace App\Controller;
-use App\Controller\AppController;
-use Cake\ORM\TableRegistry;
 
 class PlansController extends AppController {
 
@@ -19,16 +17,8 @@ class PlansController extends AppController {
      * @param $id
      */
     public function view($id) {
-        $this->loadModel('Spots');
-        $spots = $this->Spots->find('all')->contain(['Plans']);
-        $plans = [];
-
-        foreach ($spots as $spot) {
-            if ($spot->plan_id == $id) {
-                $plans[] = $spot;
-            }
-        }
-        $this->set('plans', $plans);
+        $plan = $this->Plans->get($id,['contain' => ['Spots']]);
+        $this->set('plan', $plan);
     }
 
 
