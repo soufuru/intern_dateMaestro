@@ -1,7 +1,6 @@
 <?php
 /**
  * @author Rtakaha
- * @return array
  */
 
 // src/Controller/PlansController.php
@@ -14,15 +13,15 @@ use Cake\ORM\TableRegistry;
 class PlansController extends AppController
 {
 
-    public function index()  // index page
+    public function index()
     {
-        $plans = $this->Plans->find('all')->contain(['Users']);  // find all the plans
+        $plans = $this->Plans->find('all')->contain(['Users']);
 
-        $this->set(compact('plans'));  // set plans as Plans
+        $this->set(compact('plans'));
     }
-    public function view($id = null)  // view page
+    public function view($id = null)
     {
-        $plan = $this->Plans->get($id);  // get data of gotten id
-        $this->set(compact('plan'));  // set plans as Plans
+        $plan = $this->Plans->get($id);
+        $this->set(compact('plan'));
     }
 }

@@ -1,7 +1,6 @@
 <?php
 /**
  * @author Rtakaha
- * @return array
  */
 // src/Model/Table/PlansTable.php
 
@@ -11,6 +10,10 @@ use Cake\ORM\Table;
 
 class PlansTable extends Table
 {
+
+    /**
+     * @param array $config
+     */
     public function initialize(array $config)
     {
         $this->addBehavior('Timestamp');
