@@ -16,7 +16,10 @@ $plan = $plans->first();
 
 <h1> <?=  $plan->name; ?></h1>
 
-<?= $this->Form->button(__('Like'));?>
+<?//=$this->Form->submit('LIKE')?>
+<!--<input type="submit" name="insert" value="insert" onclick="insert()" />-->
+
+<?//= $this->Form->submit('Like');?>
 
 
 <table>
