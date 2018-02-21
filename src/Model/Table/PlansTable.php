@@ -15,16 +15,19 @@ class PlansTable extends Table
 {
 
     /**
-     * @author soufuru
      * @param array $config
      */
-  public function initialize(array $config)
-  {
-    $this->addBehavior('Timestamp');
-    $this->hasMany('Spots', [
+    public function initialize(array $config)
+    {
+        $this->addBehavior('Timestamp');
+        $this->belongsTo('Users', [
+            'foreignKey' => 'user_id'
+        ]);
+
+         $this->hasMany('Spots', [
         'foreignKey' => 'plan_id',
       ]);
-  }
+    }
 
     /**
      * @author soufuru
