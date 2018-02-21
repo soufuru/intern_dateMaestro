@@ -18,4 +18,9 @@ class PlansController extends AppController
         $plans = $this->Plans->find('all');
         $this->set(compact('plans'));
     }
+    public function view($id = null)
+    {
+        $plan = $this->Plans->get($id);
+        $this->set(compact('plan'));
+    }
 }
