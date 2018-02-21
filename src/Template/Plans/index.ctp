@@ -16,7 +16,7 @@ $plan = $plans->first();
 
 <h1> <?=  $plan->name; ?></h1>
 
-<?//= $this->Form->button(__('Like'));?>
+<?= $this->Form->button(__('Like'));?>
 
 
 <table>
