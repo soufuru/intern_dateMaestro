@@ -15,6 +15,7 @@ class PlansTable extends Table
 {
 
     /**
+     * @author soufuru
      * @param array $config
      */
     public function initialize(array $config)

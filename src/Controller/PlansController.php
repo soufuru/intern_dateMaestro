@@ -11,9 +11,10 @@ use App\Controller\AppController;
 use Cake\ORM\TableRegistry;
 
 class PlansController extends AppController {
-    public $helpers = ['Html', 'Form'];
 
     /**
+     * view
+     * plans/view/idで詳細画面を表示
      * @author soufuru
      * @param $id
      */
