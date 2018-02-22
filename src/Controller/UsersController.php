@@ -18,9 +18,9 @@ class UsersController extends AppController {
      * @author Rtakaha
      * @param $id
      */
-    public function view($id)
+    public function view($id = null)
     {
-        $user = $this->Users->get($id);
-        $this->set('plan', $user);
+        $user = $this->Users->get($id, ['contain' => ['Plans']]);
+        $this->set(compact('user'));
     }
 }
