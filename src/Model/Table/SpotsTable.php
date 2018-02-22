@@ -27,10 +27,8 @@ class SpotsTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->notEmpty('title')
-            ->requirePresence('title')
-            ->notEmpty('body')
-            ->requirePresence('body');
+            ->notEmpty('place')
+            ->requirePresence('place');
         return $validator;
     }
 }
