@@ -1,7 +1,6 @@
 <?= $this->Html->css('test.css', ['block' => true]); ?>
 <h1> <?=  h($plan->name); ?></h1>
 
-<!--//= $this->Form->submit("LIKE",['class' => 'square_btn']);-->
 <div class="sample3Area" id="makeImg">
     <input type="checkbox" id="sample3check" checked="" name="like[]">
     <label for="sample3check">
