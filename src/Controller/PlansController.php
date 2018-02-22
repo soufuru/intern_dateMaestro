@@ -18,10 +18,19 @@ class PlansController extends AppController
         $plans = $this->Plans->find('all')->contain(['Users']);
 
         $this->set(compact('plans'));
+
+        foreach ($plans as $plan) {
+            dump($plan);
+        }
     }
     public function view($id = null)
     {
         $plan = $this->Plans->get($id);
+        $this->set(compact('plan'));
+    }
+    public function user($id = null)
+    {
+        $plan = $this->Plans->get($id, ['contain' => ['Users']]);
         $this->set(compact('plan'));
     }
 }
