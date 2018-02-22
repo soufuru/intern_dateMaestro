@@ -1,4 +1,21 @@
-<!-- File: src/Template/Plans/view.ctp -->
+<h1> <?=  h($plan->name); ?></h1>
 
-<!-- <h1><?= h($plan->name) ?></h1>  -->
-<p><small>Created: <?= $plan->created->format(DATE_RFC850) ?></small></p>
+<?= $this->Form->submit("LIKE",['onclick']); ?>
+
+<table>
+    <tr>
+        <th>Time</th>
+        <th>Place</th>
+        <th>Picture</th>
+    </tr>
+    <?php foreach ($plan->spots as $spot): ?>
+    <tr>
+        <td><?= h($spot->start_time); ?></td>
+        <td><?= h($spot->place); ?></td>
+        <td><a href="<?=$spot->photo ?>"> <img src=<?=$spot->photo ?> border="0"></a></td>
+    </tr>
+    <?php endforeach; ?>
+</table>
+
+<h2>コメント</h2>
+<p><?= h($plan->comment); ?></p>
