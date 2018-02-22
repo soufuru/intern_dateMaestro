@@ -3,27 +3,34 @@
  * @author Rtakaha
  */
 
+// src/Controller/PlansController.php
+
 namespace App\Controller;
 
-class PlansController extends AppController {
+use App\Controller\AppController;
+use Cake\ORM\TableRegistry;
 
+class PlansController extends AppController
+{
 
     public function index()
     {
         $plans = $this->Plans->find('all')->contain(['Users']);
 
         $this->set(compact('plans'));
+
+        foreach ($plans as $plan) {
+            dump($plan);
+        }
     }
-
-
-    /**
-     * view
-     * plans/view/idで詳細画面を表示
-     * @author soufuru
-     * @param $id
-     */
-    public function view($id) {
-        $plan = $this->Plans->get($id,['contain' => ['Spots']]);
-        $this->set('plan', $plan);
+    public function view($id = null)
+    {
+        $plan = $this->Plans->get($id);
+        $this->set(compact('plan'));
+    }
+    public function user($id = null)
+    {
+        $plan = $this->Plans->get($id, ['contain' => ['Users']]);
+        $this->set(compact('plan'));
     }
 }
