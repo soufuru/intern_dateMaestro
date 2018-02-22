@@ -9,7 +9,6 @@
 <?php endfor; ?>
 
 <div id="piyo">
-
 </div>
 
 <div>
@@ -18,7 +17,6 @@
 
 
 <?= $this->Form->input('comment') ?>
-
 <?=$this->Form->submit('投稿')?>
 <?=$this->Form->end()?>
 
@@ -26,11 +24,6 @@
 <script>
     function add() {
         var elements = document.getElementsByTagName('textarea');
-        console.log(elements.length);
-
-
-
-
         var div_element = document.createElement("div");
         div_element.innerHTML =
             '<div class="input textarea required">' +
