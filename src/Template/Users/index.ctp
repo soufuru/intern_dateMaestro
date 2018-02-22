@@ -11,8 +11,6 @@
         <th width="500">Created</th>
     </tr>
 
-    <!-- ここから、$users のクエリーオブジェクトをループして、投稿記事の情報を表示 -->
-
     <?php foreach ($users as $user): ?>
         <tr>
             <td><?= $user->id ?></td>
