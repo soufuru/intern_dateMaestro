@@ -1,6 +1,10 @@
       <!-- File: src/Template/Plans/index.ctp -->
 
       <h1>Plans</h1>
+          <?= $this->Html->link('Home', ['action' => 'index']) ?><br>
+          <?= $this->Html->link('おすすめ', ['action' => 'view', rand(1, 5)]) ?><br>
+          <?= $this->Html->link('My Account', ['action' => 'index']) ?><br>
+
       <table>
           <tr>
               <th width="50">ID</th>
@@ -18,7 +22,7 @@
                           "alt" => $plan->name,
                           'url' => ['action' => 'view', $plan->id]]) ?>
               </td>
-              <td><?= $plan->user->name ?></td>
+              <td><?= $plan->user->name ?>
               <td>
                   <?= $plan->created->format(DATE_RFC850) ?>
               </td>

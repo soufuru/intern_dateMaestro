@@ -1,35 +1,29 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: soufuru
- * Date: 2018/02/20
- * Time: 17:32
+ * @author Rtakaha
  */
+
+// src/Controller/PlansController.php
 
 namespace App\Controller;
 
-class PlansController extends AppController {
+use App\Controller\AppController;
+use Cake\ORM\TableRegistry;
 
+class PlansController extends AppController
+{
 
-    /**
-     *
-     */
-    public function index() {
+    public function index()
+    {
+        $plans = $this->Plans->find('all')->contain(['Users']);
 
+        $this->set(compact('plans'));
     }
 
-
-    /**
-     * view
-     * plans/view/idで詳細画面を表示
-     * @author soufuru
-     * @param $id
-     */
-    public function view($id) {
-        $plan = $this->Plans->get($id,['contain' => ['Spots']]);
-        $this->set('plan', $plan);
+    public function view($id = null)
+    {
+        $plan = $this->Plans->get($id);
+        $this->set(compact('plan'));
     }
-
-
 
 }
