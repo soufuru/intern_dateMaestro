@@ -3,7 +3,7 @@ namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
 
-class Plan extends Entity
+class Spot extends Entity
 {
 
 }
