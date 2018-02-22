@@ -1,6 +1,7 @@
       <!-- File: src/Template/Plans/index.ctp -->
 
       <h1>Plans</h1>
+      <?= $this->Html->css('animate.css') ?>
       <table>
           <tr>
               <th width="50">ID</th>
