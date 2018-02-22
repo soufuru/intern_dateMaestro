@@ -7,21 +7,21 @@
     <tr>
         <th width="50">ID</th>
         <th width="300">User name</th>
+        <th width="300">User image</th>
         <th width="500">Created</th>
     </tr>
 
-    <!-- ここから、$plans のクエリーオブジェクトをループして、投稿記事の情報を表示 -->
+    <!-- ここから、$users のクエリーオブジェクトをループして、投稿記事の情報を表示 -->
 
     <?php foreach ($users as $user): ?>
         <tr>
-            <td><?= $plan->id ?></td>
-            <td><?= $this->Html->image("https://uicookies.com/demo/theme/aside/images/img_4.jpg", [
-                    "alt" => $plan->name,
-                    'url' => ['action' => 'view', $plan->id]]) ?>
+            <td><?= $user->id ?></td>
+            <td><?= $this->Html->link($user->name, ['action' => 'view', $user->id]) ?></td>
+            <td><?= $this->Html->image("http://www.p4japan.com/fb-iryou/img/hito01.png", [
+                    "alt" => $user->name]) ?>
             </td>
-            <td><?= $this->Html->link($plan->user->name, ['action' => 'user', $plan->user->id]) ?>
             <td>
-                <?= $plan->created->format(DATE_RFC850) ?>
+                <?= $user->created->format(DATE_RFC850) ?>
             </td>
         </tr>
     <?php endforeach; ?>
