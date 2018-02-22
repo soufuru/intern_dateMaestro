@@ -18,6 +18,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Date Maestro</title>
+
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
@@ -28,41 +30,52 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('cake.css') ?>
-    <?= $this->Html->css('animate.css') ?>
-    <?= $this->Html->css('bootstrap.min.css') ?>
-    <?= $this->Html->css('home.css') ?>
-    <?= $this->Html->css('icomoon.css') ?>
-    <?= $this->Html->css('open-iconic-bootstrap.min.css') ?>
-    <?= $this->Html->css('owl.carousel.min.css') ?>
-    <?= $this->Html->css('owl.theme.default.min.css') ?>
-    <?= $this->Html->css('style.css') ?>
+    <?= $this->element('css_js/cj') ?>
 
-    <?= $this->Html->script('bootstrap.min.js') ?>
-    <?= $this->Html->script('imagesloaded.pkgd.min.js') ?>
-    <?= $this->Html->script('jquery.waypoints.min.js') ?>
-    <?= $this->Html->script('jquery-3.2.1.slim.min.js') ?>
-    <?= $this->Html->script('main.js') ?>
-    <?= $this->Html->script('owl.carousel.min.js') ?>
-    <?= $this->Html->script('popper.min.js') ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
 <body>
-    <nav class="top-bar expanded" data-topbar role="navigation">
+
+<aside class="probootstrap-aside js-probootstrap-aside">
+    <?= $this->element('Bar/bar') ?>
+
+    <a href="#" class="probootstrap-close-menu js-probootstrap-close-menu d-md-none"><span class="oi oi-arrow-left"></span> Close</a>
+    <div class="probootstrap-site-logo probootstrap-animate" data-animate-effect="fadeInLeft">
+
+        <a href="" class="mb-2 d-block probootstrap-logo">Home</a>
+        <p class="mb-0">Another free html5 bootstrap 4 template by <a href="https://uicookies.com/" target="_blank">uiCookies</a></p>
+    </div>
+    <div class="probootstrap-overflow">
+        <nav class="probootstrap-nav">
+            <ul>
+                <li class="probootstrap-animate active" data-animate-effect="fadeInLeft"><a href="index.html">Home</a></li>
+                <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="about.html">About</a></li>
+                <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="services.html">Services</a></li>
+                <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="portfolio.html">Portfolio</a></li>
+                <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <footer class="probootstrap-aside-footer probootstrap-animate" data-animate-effect="fadeInLeft">
+            <ul class="list-unstyled d-flex probootstrap-aside-social">
+                <li><a href="#" class="p-2"><span class="button normal">Facebook</span></a></li>
+                <li><a href="#" class="p-2"><span class="button normal">Instagram</span></a></li>
+                <li><a href="#" class="p-2"><span class="button normal">Twitter</span></a></li>
+            </ul>
+        </footer>
+    </div>
+</aside>
+
+<!--    <nav class="top-bar expanded" data-topbar role="navigation">
         <ul class="title-area large-3 medium-4 columns">
             <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
+                <h1><a href="">Date Maestro</a></h1>
             </li>
         </ul>
-        <div class="top-bar-section">
-            <ul class="right">
-                <li><a target="_blank" href="https://book.cakephp.org/3.0/">Documentation</a></li>
-                <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
-            </ul>
-        </div>
     </nav>
+    -->
     <?= $this->element('Bar/bar') ?>
     <?= $this->Flash->render() ?>
     <div class="container clearfix">
