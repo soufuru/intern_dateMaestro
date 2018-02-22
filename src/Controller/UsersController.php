@@ -12,12 +12,7 @@ class UsersController extends AppController {
         $users = $this->Users->find('all');
         $this->set(compact('users'));
     }
-    /**
-     * view
-     * users/view/idで詳細画面を表示
-     * @author Rtakaha
-     * @param $id
-     */
+
     public function view($id = null)
     {
         $user = $this->Users->get($id, ['contain' => ['Plans']]);
