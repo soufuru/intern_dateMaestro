@@ -1,11 +1,6 @@
       <!-- File: src/Template/Plans/index.ctp -->
 
       <h1>Plans</h1>
-          <?= $this->Html->link('Home', ['action' => 'index']) ?><br>
-          <?= $this->Html->link('おすすめ', ['action' => 'view', rand(1, 5)]) ?><br>
-          <?= $this->Html->link('My Account', ['action' => 'index']) ?><br>
-          <?= $this->Html->link('投稿', ['action' => 'input']) ?>
-
       <table>
           <tr>
               <th width="50">ID</th>
