@@ -1,7 +1,5 @@
 <h1>Users</h1>
-<?= $this->Html->link('Home', ['action' => 'index']) ?><br>
-<?= $this->Html->link('おすすめ', ['action' => 'view', rand(1, 5)]) ?><br>
-<?= $this->Html->link('My Account', ['action' => 'index']) ?><br>
+<?= $this->element('Bar/bar') ?>
 
 <table>
     <tr>
