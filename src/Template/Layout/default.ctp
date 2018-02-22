@@ -47,6 +47,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             </ul>
         </div>
     </nav>
+    <?= $this->Html->link('Home', ['controller' => 'plans', 'action' => 'index']) ?>
+    <?= $this->Html->link('おすすめ', ['controller' => 'plans', 'action' => 'view', rand(1, 5)]) ?>
+    <?= $this->Html->link('My Account', ['controller' => 'plans', 'action' => 'index']) ?>
     <?= $this->Flash->render() ?>
     <div class="container clearfix">
         <?= $this->fetch('content') ?>
