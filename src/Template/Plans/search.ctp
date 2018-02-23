@@ -3,14 +3,8 @@
     <p>Find your ideal date.</p>
     <?= $this->Form->create() ?>
     <fieldset>
-        <?=
-            $this->Form->input('find', [
-                'label' => ['text' => 'phrase'
-                ],
-        'required' => 'required'
-        ]);
-        echo $this->Form->button('search');
-        ?>
+        <?= $this->Form->input('find', ['label' => ['text' => 'phrase'], 'required' => 'required']) ?>
+        <?= $this->Form->button('search')?>
     </fieldset>
     <?= $this->Form->end() ?>
 
