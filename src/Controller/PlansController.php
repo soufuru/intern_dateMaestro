@@ -66,12 +66,14 @@ class PlansController extends AppController
     {
         if ($this->request->is('post')) {
             $word = $this->request->getData('find');
-            $plans = $this->Plans->find()->where(['Plans.name LIKE' => '%' .$word . '%']);
-            $this->set(compact('plans'));
+            $conditions = ['Plans.name LIKE' => '%' .$word . '%'];
         }else{
-            $plans = $this->Plans->find()->where(['Plans.id' => rand(1, 5)]);
-            $this->set(compact('plans'));
+            // get時にランダムで1プラン返す
+            $conditions = ['Plans.id' => rand(1, 5)];
         }
+        $plans = $this->Plans->find()->where($conditions);
+        $this->set(compact('plans'));
+
     }
 
 

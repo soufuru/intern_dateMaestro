@@ -3,8 +3,8 @@
     <p>Find your ideal date.</p>
     <?= $this->Form->create() ?>
     <fieldset>
-        <?php
-        echo $this->Form->input('find', [
+        <?=
+            $this->Form->input('find', [
                 'label' => ['text' => 'phrase'
                 ],
         'required' => 'required'
@@ -19,8 +19,8 @@
             <?php foreach ($plans as $plan): ?>
             <tr>
                 <td><?= $this->Html->link($plan->name, ['action' => 'view', $plan->id])?></td>
-                <?php endforeach; ?>
             </tr>
+            <?php endforeach; ?>
             </tbody>
         </table>
 </main>
