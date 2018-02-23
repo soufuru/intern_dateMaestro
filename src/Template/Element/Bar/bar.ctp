@@ -15,6 +15,9 @@
                 <li class="probootstrap-animate" data-animate-effect="fadeInLeft">
                     <?= $this->Html->link('My Account', ['controller' => 'Users', 'action' => 'view', 1])?>
                 </li>
+                <li class="probootstrap-animate" data-animate-effect="fadeInLeft">
+                    <?= $this->Html->link('Login', ['controller' => 'Users', 'action' => 'login']) ?>
+                </li>
                 <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="">Help</a></li>
             </ul>
         </nav>
