@@ -1,26 +1,30 @@
 <!-- File: src/Template/Plans/index.ctp -->
-<h1>Plans</h1>
-<table>
-    <tr>
-        <th width="50">ID</th>
-        <th>Date plan</th>
-        <th width="300">User name</th>
-        <th width="500">Created</th>
-    </tr>
+<main role="main" class="probootstrap-main js-probootstrap-main">
+    <div class="probootstrap-bar">
+        <a href="#" class="probootstrap-toggle js-probootstrap-toggle"><span class="oi oi-menu"></span></a>
+        <div class="probootstrap-main-site-logo"><a href="index.html">Aside</a></a></div>
+    </div>
+    <div class="card-columns">
+        <?php foreach($plans as $plan): ?>
+            <div class="card">
+                <a href="<?= $this->Url->build(['action' => 'view', $plan->id] )?>">
+                    <img class="card-img-top probootstrap-animate" src="https://uicookies.com/demo/theme/aside/images/<?='img_' . $plan->id . '.jpg' ?>" alt="Card image cap">
+                </a>
+            </div>
+        <?php endforeach; ?>
+    </div>
 
-    <!-- ここから、$plans のクエリーオブジェクトをループして、投稿記事の情報を表示 -->
+    <div class="container-fluid d-md-none">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="list-unstyled d-flex probootstrap-aside-social">
+                    <li><a href="#" class="p-2"><span class="icon-twitter"></span></a></li>
+                    <li><a href="#" class="p-2"><span class="icon-instagram"></span></a></li>
+                    <li><a href="#" class="p-2"><span class="icon-dribbble"></span></a></li>
+                </ul>
+                <p>&copy; 2017 <a href="https://uicookies.com/" target="_blank">uiCookies:Aside</a>. <br> All Rights Reserved. Designed by <a href="https://uicookies.com/" target="_blank">uicookies.com</a></p>
+            </div>
+        </div>
+    </div>
 
-    <?php foreach ($plans as $plan): ?>
-        <tr>
-            <td><?= $plan->id ?></td>
-            <td><?= $this->Html->image("https://uicookies.com/demo/theme/aside/images/img_4.jpg", [
-                    "alt" => $plan->name,
-                    'url' => ['action' => 'view', $plan->id]]) ?>
-            </td>
-            <td><?= $plan->user->name ?>
-            <td>
-                <?= $plan->created->format(DATE_RFC850) ?>
-            </td>
-        </tr>
-    <?php endforeach; ?>
-</table>
+</main>
