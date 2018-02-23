@@ -1,25 +1,25 @@
-<h1>投稿</h1>
+<main role="main" class="probootstrap-main js-probootstrap-main">
+    <h1>投稿</h1>
+    <?=$this->Form->create($plan) ?>
+    <?=$this->Form->input('name',['type' => 'text']) ?>
 
-<?=$this->Form->create($plan) ?>
-<?=$this->Form->input('name',['type' => 'text']) ?>
+    <?php for ($i = 0; $i < 2; ++$i): ?>
+        <?= $this->Form->input("spots.$i.place"); ?>
+        <?= $this->Form->input("spots.$i.start_time"); ?>
+    <?php endfor; ?>
 
-<?php for ($i = 0; $i < 2; ++$i): ?>
-    <?= $this->Form->input("spots.$i.place"); ?>
-    <?= $this->Form->input("spots.$i.start_time"); ?>
-<?php endfor; ?>
+    <div id="insertArea">
+    </div>
 
-<div id="insertArea">
-</div>
-
-<div>
-    <button onclick="add();" type="button">追加</button>
-</div>
+    <div>
+        <button onclick="add();" type="button">追加</button>
+    </div>
 
 
-<?= $this->Form->input('comment') ?>
-<?=$this->Form->submit('投稿')?>
-<?=$this->Form->end()?>
-
+    <?= $this->Form->input('comment') ?>
+    <?=$this->Form->submit('投稿')?>
+    <?=$this->Form->end()?>
+</main>
 
 <script>
     function add() {
