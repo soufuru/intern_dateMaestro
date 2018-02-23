@@ -8,14 +8,21 @@
         <nav class="probootstrap-nav">
             <ul>
                 <li class="probootstrap-animate active" data-animate-effect="fadeInLeft"><a href="">Home</a></li>
-                <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="">Recommend</a></li>
-                <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="">My Account</a></li>
+                <li class="probootstrap-animate" data-animate-effect="fadeInLeft">
+                    <?= $this->Html->link('Recommend', ['action' => 'view', 1])?>
+                </li>
+                <li class="probootstrap-animate" data-animate-effect="fadeInLeft">
+                    <?= $this->Html->link('My Account', ['controller' => 'Users', 'action' => 'view', 1])?>
+                </li>
                 <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="">Help</a></li>
             </ul>
         </nav>
         <footer class="probootstrap-aside-footer probootstrap-animate" data-animate-effect="fadeInLeft">
             <ul class="list-unstyled d-flex probootstrap-aside-social">
-                <li><a href="plans/input" class="p-2"><span class="button-bar">Add your plan</span></a></li>
+                <li><a href="<?= $this->Url->build(['controller' => 'Plans', 'action' => 'input'] )?>" class="p-2">
+                        <span class="button-bar">Add your plan</span>
+                    </a>
+                </li>
             </ul>
         </footer>
     </div>
