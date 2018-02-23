@@ -32,8 +32,8 @@ class PlansController extends AppController
      * 詳細画面表示
      * @author soufuru
      */
-    public function view() {
-        $plan = $this->Plans->get($this->Auth->user()['id'] ,['contain' => ['Spots']]);
+    public function view($id) {
+        $plan = $this->Plans->get($id ,['contain' => ['Spots']]);
         $this->set(compact('plan'));
     }
 
