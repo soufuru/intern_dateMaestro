@@ -13,7 +13,7 @@
                     <?= $this->Html->link('Search', ['controller' => 'Plans', 'action' => 'search'])?>
                 </li>
                 <li class="probootstrap-animate" data-animate-effect="fadeInLeft">
-                    <?= $this->Html->link('My Account', ['controller' => 'Users', 'action' => 'view', 1])?>
+                    <?= $this->Html->link('Login', ['controller' => 'Users', 'action' => 'login']) ?>
                 </li>
                 <li class="probootstrap-animate" data-animate-effect="fadeInLeft"><a href="">Help</a></li>
             </ul>

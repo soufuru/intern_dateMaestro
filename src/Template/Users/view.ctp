@@ -1,5 +1,5 @@
 <main role="main" class="probootstrap-main js-probootstrap-main">
-    <h1> <?=  h($user->name); ?></h1>
+    <h1> <?=  h($user->username); ?></h1>
 
     <table>
         <tr>
