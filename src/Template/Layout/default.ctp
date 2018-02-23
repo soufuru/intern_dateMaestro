@@ -30,7 +30,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->element('css_js/css') ?>
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('cake.css') ?>
-    <?= $this->element('css_js/js') ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
@@ -44,4 +43,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <div class="bootstrap-main">
         <?= $this->fetch('content') ?>
     </div>
+    <?= $this->element('css_js/js') ?>
+</body>
 </html>
