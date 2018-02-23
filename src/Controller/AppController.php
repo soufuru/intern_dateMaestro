@@ -60,9 +60,7 @@ class AppController extends Controller
 
     public function beforeFilter(Event $event)
     {
-        //それぞれのコントローラーのindex()メソッド、view()メソッドではログイン不要であることを設定
-        $this->Auth->allow(['index', 'view', 'add']);
-        $this->set('user_ID', $this->Auth->user()['id']);
+        $this->set('userId', $this->Auth->user()['id']);
     }
 
     function isAuthorized($user)

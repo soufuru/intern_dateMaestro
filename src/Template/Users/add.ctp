@@ -5,7 +5,7 @@
     <?=$this->Form->create($user) ?>
     <fieldset>
         <?=$this->Form->input('username',['type' => 'text']) ?>
-        <?=$this->Form->input('password',['type' => 'text']) ?>
+        <?=$this->Form->input('password',['type' => 'password']) ?>
     </fieldset>
     <?=$this->Form->submit('登録')?>
     <?=$this->Form->end()?>

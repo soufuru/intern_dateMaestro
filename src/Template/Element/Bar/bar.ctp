@@ -10,10 +10,10 @@
                 <li class="probootstrap-animate active" data-animate-effect="fadeInLeft">
                     <?= $this->Html->link('Home', ['controller' => 'Plans', 'action' => 'index'])?></li>
                 <li class="probootstrap-animate" data-animate-effect="fadeInLeft">
-                    <?= $this->Html->link('Recommend', ['controller' => 'Plans', 'action' => 'view', $user_ID])?>
+                    <?= $this->Html->link('Recommend', ['controller' => 'Plans', 'action' => 'view', $userId])?>
                 </li>
                 <li class="probootstrap-animate" data-animate-effect="fadeInLeft">
-                    <?= $this->Html->link('My Account', ['controller' => 'Users', 'action' => 'view', $user_ID])?>
+                    <?= $this->Html->link('My Account', ['controller' => 'Users', 'action' => 'view', $userId])?>
                 </li>
                 <li class="probootstrap-animate" data-animate-effect="fadeInLeft">
                     <?= $this->Html->link('Login', ['controller' => 'Users', 'action' => 'login']) ?>
