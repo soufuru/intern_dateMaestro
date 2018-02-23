@@ -12,7 +12,7 @@ class Plan extends Entity
 
             return $spot->_properties['photo'];
         } else {
-            return "https://uicookies.com/demo/theme/aside/images/img_2.jpg";
+            return "https://b-rise.jp/wp-content/themes/b-rise/images/sample_img.gif";
         }
     }
 }
