@@ -16,7 +16,6 @@ class PlansController extends AppController
     public function index()
     {
         $plans = $this->Plans->find('all')->contain(['Users', 'Spots']);
-
         $this->set(compact('plans'));
     }
 
