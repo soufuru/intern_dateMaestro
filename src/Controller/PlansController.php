@@ -53,6 +53,12 @@ class PlansController extends AppController
         $this->set(compact('plan'));
     }
 
+    public function search()
+    {
+        $plans = $this->Plans->find('all')->contain(['Users', 'Spots']);
+        $this->set(compact('plans'));
+    }
+
 
 
 
