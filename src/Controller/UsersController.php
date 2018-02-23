@@ -23,7 +23,6 @@ class UsersController extends AppController {
 
     public function view($id = null)
     {
-//        $user = $this->Users->get($id);
         $user = $this->Users->get($id, ['contain' => ['Plans']]);
         $this->set(compact('user'));
     }
@@ -41,7 +40,7 @@ class UsersController extends AppController {
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('User registered.'));
                 //登録後、どの画面に行くか
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['controller' => 'Plans', 'action' => 'index']);
             } else {
                 $this->Flash->error(__('User could not be registered. Please, try again.'));
             }
