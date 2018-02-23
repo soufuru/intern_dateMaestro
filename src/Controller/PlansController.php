@@ -62,6 +62,20 @@ class PlansController extends AppController
         $this->set(compact('plan'));
     }
 
+    public function search()
+    {
+        if ($this->request->is('post')) {
+            $word = $this->request->getData('find');
+            $conditions = ['Plans.name LIKE' => '%' .$word . '%'];
+        }else{
+            // get時にランダムで1プラン返す
+            $conditions = ['Plans.id' => rand(1, 5)];
+        }
+        $plans = $this->Plans->find()->where($conditions);
+        $this->set(compact('plans'));
+
+    }
+
 
 
 
