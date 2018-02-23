@@ -8,7 +8,7 @@
         <?php foreach($plans as $plan): ?>
             <div class="card">
                 <a href="<?= $this->Url->build(['action' => 'view', $plan->id] )?>">
-                    <img class="card-img-top probootstrap-animate" src="https://uicookies.com/demo/theme/aside/images/<?='img_' . $plan->id . '.jpg' ?>" alt="Card image cap">
+                    <img class="card-img-top probootstrap-animate" src="<?= $plan->photo ?>" alt="Card image cap">
                 </a>
             </div>
         <?php endforeach; ?>
