@@ -18,7 +18,7 @@
             <tbody>
             <?php foreach ($plans as $plan): ?>
             <tr>
-                <td><?= $this->Html->link($plan)?></td>
+                <td><?= $this->Html->link($plan->name, ['action' => 'view', $plan->id])?></td>
                 <?php endforeach; ?>
             </tr>
             </tbody>

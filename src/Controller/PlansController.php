@@ -64,8 +64,14 @@ class PlansController extends AppController
 
     public function search()
     {
-        $plans = $this->Plans->find('all')->contain(['Users', 'Spots']);
-        $this->set(compact('plans'));
+        if ($this->request->is('post')) {
+            $word = $this->request->getData('find');
+            $plans = $this->Plans->find()->where(['Plans.name LIKE' => '%' .$word . '%']);
+            $this->set(compact('plans'));
+        }else{
+            $plans = $this->Plans->find()->where(['Plans.id' => rand(1, 5)]);
+            $this->set(compact('plans'));
+        }
     }
 
 
