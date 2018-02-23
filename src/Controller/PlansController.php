@@ -49,7 +49,6 @@ class PlansController extends AppController
             $plan = $this->Plans->patchEntity($plan, $this->request->getData());
 
             $plan->user_id = $this->Auth->user()['id'];
-            dump($plan);
 
             if ($this->Plans->save($plan)) {
                 $this->Flash->success(__('The plans has been saved.'));
