@@ -15,7 +15,8 @@ class PlansController extends AppController
 {
     public function index()
     {
-        $plans = $this->Plans->find('all')->contain(['Users']);
+        $plans = $this->Plans->find('all')->contain(['Users', 'Spots']);
+
         $this->set(compact('plans'));
     }
 
@@ -28,6 +29,7 @@ class PlansController extends AppController
         $plan = $this->Plans->get($id,['contain' => ['Spots']]);
         $this->set(compact('plan'));
     }
+
 
     /**
      * 新規投稿
